@@ -1,6 +1,3 @@
-git remote add origin https://github.com/littered232/sclark.git
-git branch -M main
-git push -u origin main
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 

@@ -1,0 +1,138 @@
+:root {
+  --brand: #6B4EFF;
+  --brand-dark: #4E37C8;
+  --bg: #FAFAFC;
+  --surface: #FFFFFF;
+  --text: #1F1B2E;
+  --text-muted: #6B6579;
+  --border: #E7E4EF;
+  --success: #2E9E6D;
+  --warning: #D98A2B;
+  --danger: #D14B4B;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.app-shell {
+  max-width: 640px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btn-primary:hover { background: var(--brand-dark); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand);
+  border: 1px solid var(--brand);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 8px 4px;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.option-btn.selected {
+  border-color: var(--brand);
+  background: #F1EEFF;
+}
+
+.pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  margin: 0 6px 6px 0;
+  background: var(--bg);
+}
+
+.pill.selected {
+  border-color: var(--brand);
+  background: #F1EEFF;
+  color: var(--brand-dark);
+}
+
+.nav-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.state-meter-track {
+  background: var(--border);
+  border-radius: 999px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.state-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand), #9C8CFF);
+  transition: width 0.4s ease;
+}
+
+.text-muted { color: var(--text-muted); }
+
+textarea, input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+}
